@@ -15,11 +15,20 @@ export default function WebSDKPage() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-16">
-        <div className="text-center py-20">
-          <h2 className="!mb-6">Coming Soon</h2>
-          <p className="text-xl opacity-60">
-            Web SDK samples and demos will be available here soon.
-          </p>
+        <div className="mb-16">
+          <h2 className="!mb-6">Available Samples</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Document Generator Sample */}
+            <Link
+              href="/web-sdk/document-generator"
+              className="block p-6 border border-[var(--warm-gray-400)] rounded-lg hover:opacity-70 transition-opacity"
+            >
+              <h3 className="!mb-3">Document Generator</h3>
+              <p className="text-sm opacity-60">
+                Create professional documents using templates, data, and the Document Authoring SDK. Generate DOCX and PDF documents through an interactive wizard.
+              </p>
+            </Link>
+          </div>
         </div>
       </main>
     </div>

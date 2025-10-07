@@ -377,6 +377,13 @@ pre code {
   color: var(--digital-pollen);
 }
 
+/* Button Sizes */
+.btn-sm {
+  min-height: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.625rem;
+}
+
 /* Unordered list */
 ul {
   display: flex;
