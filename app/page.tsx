@@ -1,103 +1,155 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-white dark:bg-[#1a1414]">
+      {/* Header */}
+      <header className="border-b border-[var(--warm-gray-400)] bg-white dark:bg-[#1a1414]">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <h1 className="!mb-0">Nutrient SDK Samples</h1>
+        </div>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-6 py-16">
+        {/* Introduction */}
+        <div className="mb-16">
+          <p className="text-xl !mb-6">
+            Explore interactive demos and code samples for Nutrient's SDKs and
+            APIs. Each example demonstrates key features and implementation
+            patterns to help you integrate document processing capabilities into
+            your applications.
+          </p>
+        </div>
+
+        {/* SDK Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Web SDK */}
+          <div className="border border-[var(--warm-gray-400)] rounded-lg p-6 hover:border-[var(--digital-pollen)] transition-colors">
+            <h2 className="!mb-4">Web SDK</h2>
+            <p className="!mb-6">
+              Client-side JavaScript SDK for viewing, annotating, and editing
+              PDF documents in web browsers.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <Link
+                href="/web-sdk"
+                className="btn btn-yellow no-underline !text-[var(--black)]"
+              >
+                View Samples
+              </Link>
+              <a
+                href="https://www.nutrient.io/sdk/web/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-yellow-outline no-underline"
+              >
+                Documentation
+              </a>
+            </div>
+          </div>
+
+          {/* Document Engine */}
+          <div className="border border-[var(--warm-gray-400)] rounded-lg p-6 hover:border-[var(--digital-pollen)] transition-colors">
+            <h2 className="!mb-4">Document Engine</h2>
+            <p className="!mb-6">
+              Server-side API for document generation, conversion, and
+              processing at scale.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <Link
+                href="/document-engine"
+                className="btn btn-yellow no-underline !text-[var(--black)]"
+              >
+                View Samples
+              </Link>
+              <a
+                href="https://www.nutrient.io/sdk/document-engine/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-yellow-outline no-underline"
+              >
+                Documentation
+              </a>
+            </div>
+          </div>
+
+          {/* .NET SDK */}
+          <div className="border border-[var(--warm-gray-400)] rounded-lg p-6 hover:border-[var(--digital-pollen)] transition-colors">
+            <h2 className="!mb-4">.NET SDK</h2>
+            <p className="!mb-6">
+              Native .NET library for document processing, form filling, and PDF
+              manipulation in .NET applications.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <Link
+                href="/dotnet-sdk"
+                className="btn btn-yellow no-underline !text-[var(--black)]"
+              >
+                View Samples
+              </Link>
+              <a
+                href="https://www.nutrient.io/sdk/dotnet/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-yellow-outline no-underline"
+              >
+                Documentation
+              </a>
+            </div>
+          </div>
+
+          {/* AI Document Processing */}
+          <div className="border border-[var(--warm-gray-400)] rounded-lg p-6 hover:border-[var(--digital-pollen)] transition-colors">
+            <h2 className="!mb-4">AI Document Processing</h2>
+            <p className="!mb-6">
+              AI-powered document understanding, extraction, and classification
+              capabilities.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <Link
+                href="/ai-document-processing"
+                className="btn btn-yellow no-underline !text-[var(--black)]"
+              >
+                View Samples
+              </Link>
+              <a
+                href="https://www.nutrient.io/sdk/ai-document-processing/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-yellow-outline no-underline"
+              >
+                Documentation
+              </a>
+            </div>
+          </div>
+
+          {/* API */}
+          <div className="border border-[var(--warm-gray-400)] rounded-lg p-6 hover:border-[var(--digital-pollen)] transition-colors">
+            <h2 className="!mb-4">Nutrient API</h2>
+            <p className="!mb-6">
+              RESTful API for document operations without SDK installation or
+              server management.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <Link
+                href="/api"
+                className="btn btn-yellow no-underline !text-[var(--black)]"
+              >
+                View Samples
+              </Link>
+              <a
+                href="https://www.nutrient.io/api/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-yellow-outline no-underline"
+              >
+                Documentation
+              </a>
+            </div>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
