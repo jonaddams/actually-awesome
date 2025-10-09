@@ -41,6 +41,18 @@ export default function StyleGuide() {
             Tables
           </a>
           <span className="text-[var(--warm-gray-400)]">•</span>
+          <a href="#badges" className="hover:opacity-70 transition-opacity">
+            Badges
+          </a>
+          <span className="text-[var(--warm-gray-400)]">•</span>
+          <a href="#tags" className="hover:opacity-70 transition-opacity">
+            Tags
+          </a>
+          <span className="text-[var(--warm-gray-400)]">•</span>
+          <a href="#alerts" className="hover:opacity-70 transition-opacity">
+            Alerts
+          </a>
+          <span className="text-[var(--warm-gray-400)]">•</span>
           <a href="#code" className="hover:opacity-70 transition-opacity">
             Code
           </a>
@@ -485,6 +497,134 @@ export default function StyleGuide() {
               <li>Cell Border Bottom: 1px solid var(--warm-gray-400)</li>
               <li>Cell Font Size: 0.875rem (14px)</li>
               <li>Bold Cells: font-weight 600 for emphasis</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Badges Section */}
+      <section id="badges" className="mb-16 scroll-mt-8">
+        <h2 className="!pb-2 !mb-8 border-b-2 border-[var(--warm-gray-400)]">
+          Badges
+        </h2>
+
+        <div className="space-y-8">
+          <div>
+            <h3 className="mb-4">Badge Examples</h3>
+            <p className="mb-6 text-sm opacity-60">
+              Badges display small pieces of information like statuses, categories, or counts.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <span className="nutrient-badge nutrient-badge-neutral">Neutral</span>
+              <span className="nutrient-badge nutrient-badge-accent">Accent</span>
+              <span className="nutrient-badge nutrient-badge-success">Success</span>
+              <span className="nutrient-badge nutrient-badge-pink">Pink</span>
+              <span className="nutrient-badge nutrient-badge-coral">Coral</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="!mb-6">Badge Specifications</h3>
+            <ul className="space-y-2 font-mono text-sm list-disc pl-6">
+              <li>Font: var(--font-mono)</li>
+              <li>Font Size: 0.75rem (12px)</li>
+              <li>Font Weight: 400</li>
+              <li>Text Transform: Uppercase</li>
+              <li>Letter Spacing: 0.24px</li>
+              <li>Padding: 0 var(--spacing-2xs)</li>
+              <li>Min Height: 2rem (32px)</li>
+              <li>Border Radius: var(--radius-xs) (0.5rem/8px)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Tags Section */}
+      <section id="tags" className="mb-16 scroll-mt-8">
+        <h2 className="!pb-2 !mb-8 border-b-2 border-[var(--warm-gray-400)]">
+          Tags
+        </h2>
+
+        <div className="space-y-8">
+          <div>
+            <h3 className="mb-4">Tag Examples</h3>
+            <p className="mb-6 text-sm opacity-60">
+              Tags are used for labeling and categorization with rounded pill shapes.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <span className="nutrient-tag">JavaScript</span>
+              <span className="nutrient-tag">TypeScript</span>
+              <span className="nutrient-tag">React</span>
+              <span className="nutrient-tag">Next.js</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="!mb-6">Tag Specifications</h3>
+            <ul className="space-y-2 font-mono text-sm list-disc pl-6">
+              <li>Font: var(--font-mono)</li>
+              <li>Font Size: 0.75rem (12px)</li>
+              <li>Font Weight: 400</li>
+              <li>Text Transform: Uppercase</li>
+              <li>Letter Spacing: 0.24px</li>
+              <li>Padding: 0.25rem 0.75rem (4px 12px)</li>
+              <li>Border Radius: 9999px (full rounded)</li>
+              <li>Hover: opacity 0.8</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Alerts Section */}
+      <section id="alerts" className="mb-16 scroll-mt-8">
+        <h2 className="!pb-2 !mb-8 border-b-2 border-[var(--warm-gray-400)]">
+          Alerts
+        </h2>
+
+        <div className="space-y-8">
+          <div>
+            <h3 className="mb-4">Alert Examples</h3>
+            <p className="mb-6 text-sm opacity-60">
+              Alerts provide important messages and notifications to users.
+            </p>
+            <div className="space-y-4">
+              <div className="nutrient-alert nutrient-alert-neutral">
+                <div className="nutrient-alert-icon">ℹ</div>
+                <div className="nutrient-alert-content">
+                  This is a neutral informational alert
+                </div>
+              </div>
+              <div className="nutrient-alert nutrient-alert-success">
+                <div className="nutrient-alert-icon">✓</div>
+                <div className="nutrient-alert-content">
+                  This is a success alert
+                </div>
+              </div>
+              <div className="nutrient-alert nutrient-alert-warning">
+                <div className="nutrient-alert-icon">⚠</div>
+                <div className="nutrient-alert-content">
+                  This is a warning alert
+                </div>
+              </div>
+              <div className="nutrient-alert nutrient-alert-error">
+                <div className="nutrient-alert-icon">✕</div>
+                <div className="nutrient-alert-content">
+                  This is an error alert
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="!mb-6">Alert Specifications</h3>
+            <ul className="space-y-2 font-mono text-sm list-disc pl-6">
+              <li>Display: flex (horizontal layout)</li>
+              <li>Gap: 0.75rem (12px)</li>
+              <li>Padding: 0.75rem (12px)</li>
+              <li>Border Radius: var(--radius-xs) (0.5rem/8px)</li>
+              <li>Icon Size: 2.5rem × 2.5rem (40px × 40px)</li>
+              <li>Icon Border Radius: var(--radius-xs)</li>
+              <li>Content Line Height: 160%</li>
             </ul>
           </div>
         </div>

@@ -565,3 +565,151 @@ ol p {
     color: var(--warm-gray-600);
   }
 }
+
+/* Nutrient Badge/Label Styles */
+.nutrient-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-2xs);
+  min-height: 2rem;
+  width: fit-content;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.24px;
+  line-height: normal;
+}
+
+.nutrient-badge-neutral {
+  background: var(--warm-gray-200);
+  color: var(--black);
+}
+
+@media (prefers-color-scheme: dark) {
+  .nutrient-badge-neutral {
+    background: var(--warm-gray-800);
+    color: var(--white);
+  }
+}
+
+.nutrient-badge-accent {
+  background: var(--digital-pollen);
+  color: var(--black);
+}
+
+.nutrient-badge-success {
+  background: var(--data-green);
+  color: var(--black);
+}
+
+.nutrient-badge-pink {
+  background: var(--disc-pink);
+  color: var(--black);
+}
+
+.nutrient-badge-coral {
+  background: var(--code-coral);
+  color: var(--black);
+}
+
+/* Nutrient Tag Styles */
+.nutrient-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.24px;
+  line-height: 130%;
+  width: fit-content;
+  background: var(--black);
+  color: var(--white);
+  transition: all 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .nutrient-tag {
+    background: var(--warm-gray-200);
+    color: var(--black);
+  }
+}
+
+.nutrient-tag:hover {
+  opacity: 0.8;
+}
+
+/* Nutrient Alert Styles */
+.nutrient-alert {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-xs);
+  width: 100%;
+}
+
+.nutrient-alert-icon {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--radius-xs);
+  background: var(--black);
+  color: var(--white);
+}
+
+.nutrient-alert-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  line-height: 160%;
+}
+
+.nutrient-alert-neutral {
+  background: var(--warm-gray-100);
+}
+
+@media (prefers-color-scheme: dark) {
+  .nutrient-alert-neutral {
+    background: var(--warm-gray-900);
+  }
+}
+
+.nutrient-alert-success {
+  background: var(--data-green-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  .nutrient-alert-success {
+    background: var(--data-green-dark);
+  }
+}
+
+.nutrient-alert-warning {
+  background: var(--digital-pollen-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  .nutrient-alert-warning {
+    background: var(--digital-pollen-dark);
+  }
+}
+
+.nutrient-alert-error {
+  background: var(--code-coral-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  .nutrient-alert-error {
+    background: var(--code-coral-dark);
+  }
+}
