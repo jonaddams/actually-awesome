@@ -48,5 +48,5 @@ invoice-management-system
 # in progress
 app/web-sdk/document-generator
 public/document-generator
-
-
+app/ai-document-processing/invoices
+public/documents/invoices

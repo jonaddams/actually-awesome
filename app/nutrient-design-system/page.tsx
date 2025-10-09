@@ -37,6 +37,10 @@ export default function StyleGuide() {
             Lists
           </a>
           <span className="text-[var(--warm-gray-400)]">•</span>
+          <a href="#tables" className="hover:opacity-70 transition-opacity">
+            Tables
+          </a>
+          <span className="text-[var(--warm-gray-400)]">•</span>
           <a href="#code" className="hover:opacity-70 transition-opacity">
             Code
           </a>
@@ -394,6 +398,94 @@ export default function StyleGuide() {
               <li>Customize UI and functionality</li>
               <li>Deploy to production</li>
             </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* Tables Section */}
+      <section id="tables" className="mb-16 scroll-mt-8">
+        <h2 className="!pb-2 !mb-8 border-b-2 border-[var(--warm-gray-400)]">
+          Tables
+        </h2>
+
+        <div className="space-y-8">
+          <div>
+            <h3 className="mb-4">Basic Table</h3>
+            <p className="!mb-6 text-sm opacity-60">
+              Tables display structured data in rows and columns with clean
+              typography and subtle hover states. Based on the official Nutrient
+              website design.
+            </p>
+            <div className="nutrient-table-container">
+              <table className="nutrient-table">
+                <thead>
+                  <tr>
+                    <th className="nutrient-th nutrient-th-title">Name</th>
+                    <th className="nutrient-th nutrient-th-title">Category</th>
+                    <th className="nutrient-th nutrient-th-title">Status</th>
+                    <th className="nutrient-th nutrient-th-title">
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="nutrient-td nutrient-td-bold">
+                      Custom Toolbar
+                    </td>
+                    <td className="nutrient-td">User Interface</td>
+                    <td className="nutrient-td">Available</td>
+                    <td className="nutrient-td">
+                      Demonstrates how to customize the toolbar with custom
+                      buttons
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="nutrient-td nutrient-td-bold">
+                      Highlight Annotations
+                    </td>
+                    <td className="nutrient-td">Annotations</td>
+                    <td className="nutrient-td">Available</td>
+                    <td className="nutrient-td">
+                      Shows how to add and manage highlight annotations
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="nutrient-td nutrient-td-bold">
+                      Form Filling
+                    </td>
+                    <td className="nutrient-td">Forms</td>
+                    <td className="nutrient-td">Available</td>
+                    <td className="nutrient-td">
+                      Example of programmatically filling form fields
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="!mb-6">Table Specifications</h3>
+            <ul className="space-y-2 font-mono text-sm list-disc pl-6">
+              <li>Container: Full width with overflow-x-auto</li>
+              <li>Min Width: 768px (responsive scrolling)</li>
+              <li>Border Collapse: collapse</li>
+              <li>Cell Padding: var(--spacing-xs) (0.75rem/12px)</li>
+              <li>Header Background: Transparent</li>
+              <li>Header Font: var(--font-mono)</li>
+              <li>Header Font Size: 0.75rem (12px)</li>
+              <li>Header Font Weight: 400</li>
+              <li>Header Text Transform: Uppercase</li>
+              <li>Header Letter Spacing: 0.24px</li>
+              <li>
+                Row Hover Background: var(--warm-gray-100) / dark:
+                var(--warm-gray-950)
+              </li>
+              <li>Cell Border Bottom: 1px solid var(--warm-gray-400)</li>
+              <li>Cell Font Size: 0.875rem (14px)</li>
+              <li>Bold Cells: font-weight 600 for emphasis</li>
+            </ul>
           </div>
         </div>
       </section>
