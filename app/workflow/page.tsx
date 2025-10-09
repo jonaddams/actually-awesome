@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function APIPage() {
+export default function WorkflowPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-[#1a1414]">
       {/* Header */}
@@ -10,23 +10,15 @@ export default function APIPage() {
             ← Back to Home
           </Link>
           <div className="flex items-end justify-between gap-4 flex-wrap">
-            <h1 className="!mb-0">Nutrient API Samples</h1>
+            <h1 className="!mb-0">Workflow Samples</h1>
             <div className="flex gap-3 mb-1">
               <a
-                href="https://www.nutrient.io/api/"
+                href="https://www.nutrient.io/workflow-automation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-sm btn-secondary"
               >
                 Product Home
-              </a>
-              <a
-                href="https://www.nutrient.io/guides/api/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-sm btn-secondary"
-              >
-                Guides
               </a>
             </div>
           </div>
@@ -38,19 +30,20 @@ export default function APIPage() {
         <div className="mb-16">
           <h2 className="!mb-6">Coming Soon</h2>
           <p className="text-xl opacity-80 max-w-4xl mb-8">
-            Nutrient API samples are currently in development. Check back soon
-            for interactive examples demonstrating RESTful document operations
-            without SDK installation or server management.
+            Workflow automation samples are currently in development. Check back
+            soon for interactive examples demonstrating how to automate
+            document-centric business processes with AI-powered workflow
+            orchestration and intelligent routing.
           </p>
           <p className="opacity-70 max-w-4xl">
             In the meantime, visit the{" "}
             <a
-              href="https://www.nutrient.io/api/"
+              href="https://www.nutrient.io/workflow-automation"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:opacity-70"
             >
-              Nutrient API documentation
+              Workflow documentation
             </a>{" "}
             to learn more about this product.
           </p>

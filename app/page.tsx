@@ -148,6 +148,31 @@ export default function Home() {
               </a>
             </div>
           </div>
+
+          {/* Workflow */}
+          <div className="border border-[var(--warm-gray-400)] rounded-lg p-6 hover:border-[var(--digital-pollen)] transition-colors">
+            <h2 className="!mb-4">Workflow</h2>
+            <p className="!mb-6">
+              Automate document-centric business processes with AI-powered
+              workflow orchestration and intelligent routing.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <Link
+                href="/workflow"
+                className="btn btn-yellow no-underline !text-[var(--black)]"
+              >
+                View Samples
+              </Link>
+              <a
+                href="https://www.nutrient.io/workflow-automation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-yellow-outline no-underline"
+              >
+                Documentation
+              </a>
+            </div>
+          </div>
         </div>
       </main>
     </div>
