@@ -14,13 +14,15 @@ const samples: Sample[] = [
   {
     name: "Custom Toolbar",
     category: "User Interface",
-    description: "Demonstrates how to customize the viewer toolbar with custom buttons and controls",
+    description:
+      "Demonstrates how to customize the viewer toolbar with custom buttons and controls",
     path: "/web-sdk/custom-toolbar",
   },
   {
     name: "Dark Mode Theme",
     category: "User Interface",
-    description: "Shows how to implement and toggle between light and dark themes",
+    description:
+      "Shows how to implement and toggle between light and dark themes",
     path: "/web-sdk/dark-mode",
   },
   {
@@ -62,7 +64,8 @@ const samples: Sample[] = [
   {
     name: "Electronic Signatures",
     category: "Signatures",
-    description: "Collect electronic signatures with a simple signature workflow",
+    description:
+      "Collect electronic signatures with a simple signature workflow",
     path: "/web-sdk/electronic-signatures",
   },
   {
@@ -86,7 +89,8 @@ const samples: Sample[] = [
   {
     name: "Document Generator",
     category: "Document Editor",
-    description: "Create professional documents using templates, data, and the Document Authoring SDK",
+    description:
+      "Create professional documents using templates, data, and the Document Authoring SDK",
     path: "/web-sdk/document-generator",
   },
 ];
@@ -105,9 +109,10 @@ const categories = [
 export default function WebSDKPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredSamples = selectedCategory === "All"
-    ? samples
-    : samples.filter(sample => sample.category === selectedCategory);
+  const filteredSamples =
+    selectedCategory === "All"
+      ? samples
+      : samples.filter((sample) => sample.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#1a1414]">
@@ -117,14 +122,34 @@ export default function WebSDKPage() {
           <Link href="/" className="text-sm opacity-60 hover:opacity-100 mb-2">
             ← Back to Home
           </Link>
-          <h1 className="!mb-0">Web SDK Samples</h1>
+          <div className="flex items-end justify-between gap-4 flex-wrap">
+            <h1 className="!mb-0">Web SDK Samples</h1>
+            <div className="flex gap-3 mb-1">
+              <a
+                href="https://www.nutrient.io/sdk/web/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-sm btn-secondary"
+              >
+                Product Home
+              </a>
+              <a
+                href="https://www.nutrient.io/guides/web/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-sm btn-secondary"
+              >
+                Guides
+              </a>
+            </div>
+          </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 py-16">
+      <main className="max-w-7xl mx-auto px-6 py-8">
         <div className="mb-16">
-          <h2 className="!mb-6">Available Samples</h2>
+          {/* <h2 className="!mb-6">Available Samples</h2> */}
 
           {/* Category Filter */}
           <div className="mb-6 flex flex-wrap gap-2">
