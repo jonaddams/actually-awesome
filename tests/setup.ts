@@ -42,7 +42,7 @@ vi.mock("next/script", () => ({
 }));
 
 // Mock Nutrient SDK (loaded via CDN)
-global.NutrientViewer = {
+(global as any).NutrientViewer = {
   load: vi.fn().mockResolvedValue({
     instance: {
       setViewState: vi.fn(),
@@ -50,7 +50,7 @@ global.NutrientViewer = {
       removeEventListener: vi.fn(),
     },
   }),
-} as any;
+};
 
 // Mock window.matchMedia for dark mode tests
 Object.defineProperty(window, "matchMedia", {

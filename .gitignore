@@ -42,11 +42,12 @@ next-env.d.ts
 
 # for reference only
 nutrient-website
-document-generator
+/document-generator
 invoice-management-system
 
-# in progress
-app/web-sdk/document-generator
-public/document-generator
-app/ai-document-processing/invoices
-public/documents/invoices
+# in progress - API routes not ready for deployment
+app/ai-document-processing/invoices/api/**
+app/ai-document-processing/invoices/lib/**
+app/ai-document-processing/invoices/preview/**
+app/ai-document-processing/invoices/results/**
+public/documents/**
