@@ -1,5 +1,6 @@
-import { render, screen, waitFor } from "@testing-library/react";
-import { describe, it, expect, vi } from "vitest";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { describe, it, expect } from "vitest";
 import DocumentGeneratorPage from "@/app/web-sdk/document-generator/page";
 
 describe("Document Generator Integration", () => {
@@ -20,43 +21,69 @@ describe("Document Generator Integration", () => {
     expect(backLink.closest("a")).toHaveAttribute("href", "/web-sdk");
   });
 
-  it("should show loading state initially", () => {
+  it("should render step indicator with all 5 steps", () => {
     render(<DocumentGeneratorPage />);
 
+    expect(screen.getByText("Choose Template")).toBeInTheDocument();
+    expect(screen.getByText("Customize")).toBeInTheDocument();
+    expect(screen.getByText("Add Data")).toBeInTheDocument();
+    expect(screen.getByText("Preview")).toBeInTheDocument();
+    expect(screen.getByText("Download")).toBeInTheDocument();
+  });
+
+  it("should show step 1 content by default", () => {
+    render(<DocumentGeneratorPage />);
+
+    expect(screen.getByText("Choose a Template")).toBeInTheDocument();
     expect(
-      screen.getByText("Loading Document Authoring SDK...")
+      screen.getByText("Select one of our pre-made templates or upload your own DOCX file")
     ).toBeInTheDocument();
-    expect(screen.getByText(/○ Document Authoring SDK/)).toBeInTheDocument();
-    expect(screen.getByText(/○ NutrientViewer SDK/)).toBeInTheDocument();
   });
 
-  it("should show loading spinner while SDKs are loading", () => {
-    const { container } = render(<DocumentGeneratorPage />);
+  it("should render template cards", () => {
+    render(<DocumentGeneratorPage />);
 
-    const spinner = container.querySelector(".animate-spin");
-    expect(spinner).toBeInTheDocument();
+    expect(screen.getByText("Invoice Template")).toBeInTheDocument();
+    expect(screen.getByText("Checklist Template")).toBeInTheDocument();
+    expect(screen.getByText("Menu Template")).toBeInTheDocument();
   });
 
-  it("should apply gradient background", () => {
+  it("should render navigation buttons", () => {
+    render(<DocumentGeneratorPage />);
+
+    expect(screen.getByText("← Previous")).toBeInTheDocument();
+    expect(screen.getByText("Next →")).toBeInTheDocument();
+  });
+
+  it("should navigate to next step when Next button is clicked", async () => {
+    const user = userEvent.setup();
+    render(<DocumentGeneratorPage />);
+
+    const nextButton = screen.getByText("Next →");
+    await user.click(nextButton);
+
+    expect(screen.getByText("Customize Your Template")).toBeInTheDocument();
+  });
+
+  it("should disable Previous button on first step", () => {
+    render(<DocumentGeneratorPage />);
+
+    const previousButton = screen.getByText("← Previous");
+    expect(previousButton).toBeDisabled();
+  });
+
+  it("should have light gray background", () => {
     const { container } = render(<DocumentGeneratorPage />);
 
-    const mainContainer = container.querySelector(".bg-gradient-to-br");
+    const mainContainer = container.querySelector(".bg-\\[var\\(--warm-gray-100\\)\\]");
     expect(mainContainer).toBeInTheDocument();
   });
 
-  it("should render loading state with proper styling", () => {
-    const { container } = render(<DocumentGeneratorPage />);
-
-    const loadingCard = container.querySelector(".rounded-xl.shadow-lg");
-    expect(loadingCard).toBeInTheDocument();
-    expect(loadingCard).toHaveClass("border", "border-gray-200");
-  });
-
-  it("should have header with dark background", () => {
+  it("should have white header with border", () => {
     const { container } = render(<DocumentGeneratorPage />);
 
     const header = container.querySelector("header");
     expect(header).toBeInTheDocument();
-    expect(header).toHaveClass("bg-[#1a1a1a]", "text-white");
+    expect(header).toHaveClass("bg-white", "border-b");
   });
 });
